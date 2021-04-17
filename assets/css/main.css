@@ -176,7 +176,7 @@ body {
 section > .more,
 .experience .role > p,
 .p_training .details .sec_text {
-  color: rgba(255, 217, 0, 0.925);
+  color: rgba(255, 217, 102);
   font-style: italic;
 }
 
@@ -240,12 +240,12 @@ section .more > span {
   font-size: 1.25rem;
 }
 
-.details h5 > span {
+.previous h5 > span {
   display: block;
   font-size: 1.2rem;
   font-style: italic;
   font-weight: lighter;
-  color: rgba(255, 217, 0, 0.925);
+  color: rgba(255, 217, 102);
 }
 
 .previous .details > span {
@@ -263,6 +263,11 @@ section .more > span {
   align-items: center;
   justify-content: space-between;
 }
+
+.last .more > .desc {
+  color: rgba(255, 217, 102);
+}
+
 
 
 /* ----- TRAINING ----- */
@@ -450,12 +455,12 @@ section .more > span {
     font-size: 1.25rem;
   }
   
-  .details h5 > span {
+  .previous h5 > span {
     display: inline;
     font-size: 1.2rem;
     font-style: italic;
     font-weight: lighter;
-    color: rgba(255, 217, 0, 0.925);
+    color: rgba(255, 217, 102);
   }
   
   .previous .details > span {
@@ -504,6 +509,10 @@ section .more > span {
   
   .p_training .details > span {
     margin-right: 70px;
+  }
+
+  .last .more > .desc {
+    color: rgba(255, 217, 102);
   }
   
   
