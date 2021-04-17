@@ -194,17 +194,17 @@ section .more > span {
 
 .latest .details > h5 {
   font-size: 1.25rem;
-  margin-left: 40px;
+  margin-left: 0;
 }
 
 .latest .details > span {
   position: relative;
-  right: 19px;
+  right: 0;
   bottom: 0;
 }
 
 .experience .role {
-  padding: 5px 0 0 40px;
+  padding: 5px 0 0 10px;
   text-align: justify;
 }
 
@@ -241,6 +241,7 @@ section .more > span {
 }
 
 .details h5 > span {
+  display: block;
   font-size: 1.2rem;
   font-style: italic;
   font-weight: lighter;
@@ -248,7 +249,7 @@ section .more > span {
 }
 
 .previous .details > span {
-  margin-left: 40px;
+  margin-left: 0;
 }
 
 .experience .last > .details {
@@ -258,18 +259,9 @@ section .more > span {
 .last .details > .more {
   width: 100%;
   display: flex;
-  position: relative;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-}
-
-.last .more > .desc {
-  padding-left: 40px;
-}
-
-.last .more > .date {
-  position: relative;
-  right: 38px;
 }
 
 
@@ -450,7 +442,7 @@ section .more > span {
   }
   
   .experience .previous > .details {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
   
   .previous .details > h5 {
@@ -459,6 +451,7 @@ section .more > span {
   }
   
   .details h5 > span {
+    display: inline;
     font-size: 1.2rem;
     font-style: italic;
     font-weight: lighter;
@@ -466,7 +459,8 @@ section .more > span {
   }
   
   .previous .details > span {
-    margin-left: 40px;
+    width: 120px;
+    margin-right: 27px;
   }
   
   .experience .last > .details {
