@@ -12,15 +12,13 @@ html {
 
 /* GENERAL STYLES */
 h1 {
-  font-size: 2.4rem;
-  /* font-size: 3rem; LG */
+  font-size: 2.3rem;
 }
 
 h4 {
   font-size: 1.5rem;
   margin-bottom: 10px;
   text-decoration: underline;
-  /* font-size: 1.8rem; LG */
 }
 
 h5 {
@@ -41,9 +39,8 @@ body {
 
 /* ----- HEAD SECTION ----- */
 .parent_container {
-  width: auto;
-  min-width: 300px;
-  max-width: 700px;
+  width: 95% !important;
+  max-width: 750px !important;
   min-height: 100vh;
   margin: 0 auto;
   padding: 50px 15px 50px 10px;
@@ -54,12 +51,14 @@ body {
   -moz-box-shadow: 3px 5px 13px 2px rgba(0,0,0,0.34);
 }
 
+/* NAME AND DETAILS BLOCK */
 .parent_container > .name_block {
   height: 100%;
   margin: 0 auto;
   padding: 0 1.7em;
-  min-width: auto;
+  width: 100%;
   max-width: 500px;
+  text-align: center;
 }
 
 .name_block::after {
@@ -72,14 +71,12 @@ body {
 
 .name_block > .surname {
   min-width: 100%;
-  margin-left: 35px;
   color: midnightblue;
 }
 
 .name_block > .my_names {
   color: blue;
-  width: 300px;
-  min-width: 300px;
+  width: 100%;
   margin: .3em auto;
   margin-bottom: 0;
   text-align: center;
@@ -90,8 +87,9 @@ body {
   margin: 0 auto;
   margin-top: 1em;
   padding: 0 1.7em;
-  min-width: 250px;
-  max-width: 580px;
+  width: 100%;
+  max-width: 500px;
+  padding-left: 35px;
 }
 
 .parent_container .details > .fam {
@@ -111,7 +109,7 @@ body {
   height: 100%;
   margin: 0 auto;
   margin-top: 1em;
-  min-width: 450px;
+  min-width: 300px;
   max-width: 600px;
   padding: .8em 2.6em;
   border-radius: 15px;
@@ -143,10 +141,8 @@ body {
 }
 
 .interests > h4::before {
-  left: -76px;
+  left: -39px;
 }
-
-
 
 .overview_block > p {
   font-size: 1.3rem;
@@ -172,14 +168,9 @@ body {
 .education section > .more,
 .experience section > .details {
   display: flex;
+  flex-wrap: wrap;
   position: relative;
   justify-content: space-between;
-}
-
-.education section .details > span {
-  position: relative;
-  right: 57px;
-  bottom: 0;
 }
 
 section > .more,
@@ -189,8 +180,10 @@ section > .more,
   font-style: italic;
 }
 
-section .more > p {
-  margin-left: 40px;
+section .more > p,
+section .more > span {
+  width: 100%;
+  text-align: center;
 }
 
 /* ----- WORK EXPERIENCE ----- */
@@ -281,42 +274,36 @@ section .more > p {
 
 
 /* ----- TRAINING ----- */
-.p_training > .title {
+.p_training {
   text-align: center;
 }
 
 .p_training > .details {
   display: flex;
-  flex-wrap: wrap;
-  position: relative;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.p_training .details > span {
-  width: 100%;
-  margin-left: 40px;
-  /* background-color: sienna; */
+/* ----- SKILLS ----- */
+.skills > .title {
+  text-align: center;
 }
 
-
-/* ----- SKILLS ----- */
 .skills > .details {
   display: flex;
+  flex-wrap: wrap;
   font-size: 1.2rem;
   justify-content: space-between;
 }
 
 .skills .details > .left {
   width: 50%;
-  margin-left: 40px;
   position: relative;
   list-style-type: none;
 }
 
 .skills .details > .right {
-  margin-left: 30px;
   position: relative;
   list-style-type: none;
 }
@@ -333,12 +320,13 @@ section .more > p {
 
 /* ----- INTERESTS ----- */
 .interests {
-  display: flex;
-  align-items: center;
+  display: block;
+  text-align: center;
+  margin-top: 1em;
 }
 
 .interests > .title {
-  margin: 0 .5em 0 2.5em;
+  width: 100%;
 }
 
 
@@ -349,24 +337,245 @@ section .more > p {
 
 .references > .details {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .references .details > .left,
 .references .details > .right {
   line-height: 1.7;
   list-style-type: none;
+  text-align: center;
 }
 
-.references .details > .left {
-  margin-left: 2.8em;
+.references .details > .right {
+  margin-top: 1em;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 /* --------------- MEDIA QUERIES --------------- */
-@media (min-width: 600px) {
-  /* body {
-    background: #000;
-  } */
+@media (min-width: 550px) {
+  /* ----- MAIN CONTENT SECTION ----- */
+  .interests > h4::before {
+    left: -76px;
+  }
+
+  /* ----- EDUCATION ----- */
+  .education section .details > span {
+    position: relative;
+    right: 57px;
+    bottom: 0;
+  }
+  
+  section .more > p {
+    margin-left: 40px;
+  }
+
+  section .more > p,
+  section .more > span {
+    width: auto;
+    text-align: left;
+  }
+  
+  /* ----- WORK EXPERIENCE ----- */
+  .content_block > .experience {
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .latest .details > h5 {
+    font-size: 1.25rem;
+    margin-left: 40px;
+  }
+  
+  .latest .details > span {
+    position: relative;
+    right: 19px;
+    bottom: 0;
+  }
+  
+  .experience .role {
+    padding: 5px 0 0 40px;
+    text-align: justify;
+  }
+  
+  .experience .achievement_list {
+    list-style-type: none;
+  }
+  
+  .experience .achievement_list > li {
+    position: relative;
+  }
+  
+  .experience .achievement_list > li::before {
+    content: '-';
+    position: absolute;
+    left: -25px;
+  }
+  
+  .experience > .previous,
+  .experience > .last,
+  .p_training,
+  .skills,
+  .interests,
+  .references {
+    margin-top: 1em;
+  }
+  
+  .experience .previous > .details {
+    flex-wrap: wrap;
+  }
+  
+  .previous .details > h5 {
+    width: 90%;
+    font-size: 1.25rem;
+  }
+  
+  .details h5 > span {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: lighter;
+    color: rgba(255, 217, 0, 0.925);
+  }
+  
+  .previous .details > span {
+    margin-left: 40px;
+  }
+  
+  .experience .last > .details {
+    flex-wrap: wrap;
+  }
+  
+  .last .details > .more {
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .last .more > .desc {
+    padding-left: 40px;
+  }
+  
+  .last .more > .date {
+    position: relative;
+    right: 38px;
+  }
+  
+  
+  /* ----- TRAINING ----- */
+  .p_training {
+    text-align: left;
+  }
+
+  .p_training > .title {
+    text-align: center;
+  }
+  
+  .p_training > .details {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .p_training .details > span {
+    margin-right: 70px;
+  }
+  
+  
+  /* ----- SKILLS ----- */
+  .skills > .title {
+    text-align: left;
+  }
+
+  .skills > .details {
+    flex-wrap: nowrap;
+  }
+  
+  .skills .details > .left {
+    width: 50%;
+    margin-left: 40px;
+    position: relative;
+    list-style-type: none;
+  }
+  
+  .skills .details > .right {
+    margin-left: 30px;
+    position: relative;
+    list-style-type: none;
+  }
+  
+  .skills .left > li::before,
+  .skills .right > li::before {
+    content: '\2713';
+    font-size: 1rem;
+    display: block;
+    position: absolute;
+    left: -15px;
+  }
+  
+  
+  /* ----- INTERESTS ----- */
+  .interests {
+    display: flex;
+    align-items: center;
+  }
+  
+  .interests > .title {
+    margin: 0 .5em 0 2.5em;
+    width: auto;
+    text-align: left;
+  }
+  
+  
+  /* ----- REFERENCES ----- */
+  
+  .references > .details {
+    justify-content: space-between;
+  }
+  
+  .references .details > .left,
+  .references .details > .right {
+    line-height: 1.7;
+    list-style-type: none;
+    text-align: left;
+  }
+  
+  .references .details > .left {
+    margin-left: 2.8em;
+  }
+
+  .references .details > .right {
+    margin-top: 0;
+  }
 }
