@@ -329,7 +329,7 @@ section .more > span {
 
 .references > .details {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -555,6 +555,7 @@ section .more > span {
   /* ----- REFERENCES ----- */
   
   .references > .details {
+    flex-direction: row;
     justify-content: space-between;
   }
   
